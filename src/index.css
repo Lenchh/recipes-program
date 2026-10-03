@@ -57,7 +57,8 @@ li,
 button,
 span,
 a,
-label {
+label,
+input {
   margin: 0;
   font-family: 'Playfair Display', sans-serif;
   font-optical-sizing: auto;
