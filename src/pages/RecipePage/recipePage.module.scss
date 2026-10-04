@@ -1,0 +1,12 @@
+.recipePage {
+  max-width: 1440px;
+  width: 80%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.756);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

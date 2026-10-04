@@ -1,6 +1,6 @@
 .homePage {
   max-width: 1440px;
-  width: 70%;
+  width: 80%;
   min-height: 100vh;
   background-color: var(--bg-color);
   margin: 0 auto;
@@ -82,6 +82,21 @@
   }
 }
 
+.recipes {
+  width: 100%;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  justify-content: center;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .recipes {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
+
 @media screen and (max-width: 768px) {
   .searchRecipe {
     width: 100%;
@@ -104,5 +119,9 @@
   }
   .headerActions {
     width: 100%;
+  }
+
+  .recipes {
+    grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
   }
 }

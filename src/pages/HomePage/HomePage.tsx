@@ -1,8 +1,11 @@
 import { useState, type ChangeEvent, type JSX } from 'react';
 import HomePageStyle from './HomePage.module.scss';
-import cookieIcon from '../../assets/HomePage/foodBankIcon.svg';
-import accountIcon from '../../assets/HomePage/accountIcon.svg';
+// import foodBankIcon from '../../assets/HomePage/foodBankIcon.svg';
+// import accountIcon from '../../assets/HomePage/accountIcon.svg';
 import searchIcon from '../../assets/HomePage/searchIcon.svg';
+import { recipes } from '../../data/mock-data';
+import { RecipeBlock } from './components/RecipeBlock';
+import { Header } from '../../common/components/Header/Header';
 
 export function HomePage(): JSX.Element {
   const [inputValue, setInputValue] = useState<string>('');
@@ -15,10 +18,11 @@ export function HomePage(): JSX.Element {
 
   return (
     <div className={HomePageStyle.homePage}>
-      <div className={HomePageStyle.header}>
+      <Header />
+      {/* <div className={HomePageStyle.header}>
         <h1>
           <span>
-            <img src={cookieIcon} alt="cookie icon" />
+            <img src={foodBankIcon} alt="cookie icon" />
             КНИГА
           </span>
           <br />
@@ -28,7 +32,7 @@ export function HomePage(): JSX.Element {
           <img src={accountIcon} alt="account icon" />
           <button>+ ДОДАТИ РЕЦЕПТ</button>
         </div>
-      </div>
+      </div> */}
       <div className={HomePageStyle.searchRecipe}>
         <input
           type="text"
@@ -39,6 +43,11 @@ export function HomePage(): JSX.Element {
         <button>
           <img src={searchIcon} alt="search icon" />
         </button>
+      </div>
+      <div className={HomePageStyle.recipes}>
+        {recipes.map((recipe) => (
+          <RecipeBlock key={recipe.id} recipe={recipe} />
+        ))}
       </div>
     </div>
   );
