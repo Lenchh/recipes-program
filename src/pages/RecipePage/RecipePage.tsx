@@ -20,8 +20,9 @@ export function RecipePage(): JSX.Element {
             <div className={recipePageStyle.mainInfo}>
               <p>
                 <span>
-                  <img src={hourglassIcon} alt="clock icon" /> {recipe.cookingTime}хв
-                </span>{' '}
+                  <img src={hourglassIcon} alt="clock icon" />
+                  {recipe.cookingTime} хв
+                </span>
               </p>
               <p>Порції: {recipe.servings}</p>
             </div>
