@@ -4,6 +4,7 @@
   --bg-color: #fbf2e9;
   --color-text-muted: #747272;
   --color-text-black: #000000;
+  --color-category: #7a956e;
   --font-size-head: clamp(24px, 2vw, 32px);
   --font-size-text: clamp(16px, 2vw, 18px);
   --font-size-small-text: 13px;
