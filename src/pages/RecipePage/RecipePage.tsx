@@ -41,6 +41,17 @@ export function RecipePage(): JSX.Element {
               </ul>
             </div>
           </div>
+          <div className={recipePageStyle.steps}>
+            <p>КРОКИ ПРИГОТУВАННЯ</p>
+            <ul>
+              {recipe.steps.map((step) => (
+                <li>
+                  <span className={recipePageStyle.stepId}>{step.id}</span>{' '}
+                  <span className={recipePageStyle.stepDesc}>{step.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       ) : (
         <p>{':('}</p>

@@ -15,7 +15,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .info {
@@ -78,7 +78,7 @@
 
 .ingredients {
   width: 45%;
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
   p {
     font-size: var(--font-size-text);
@@ -100,6 +100,55 @@
       }
     }
   }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+
+  p {
+    font-size: var(--font-size-text);
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-size: var(--font-size-text);
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.stepId {
+  font-family: 'Times New Roman', Times, serif;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.stepDesc {
+  width: 80%;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 24px;
+  width: fit-content;
 }
 
 @media screen and (max-width: 640px) {
